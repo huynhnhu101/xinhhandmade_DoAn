@@ -13,27 +13,7 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu">
-
-									<a href="home-02.html">Trang chủ</a>
-								
-							</li>
-
-							<li>
-								<a href="product.html">Sản phẩm</a>
-							</li>
-
-							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.html">Giỏ hàng</a>
-							</li>
-
-							<li>
-								<a href="blog.html">Blog</a>
-							</li>
-
-							<li>
-								<a href="loginAdmin.html">Quản trị</a>
-							</li>
+						@yield('active_desktop')
 						</ul>
 					</div>	
 
@@ -100,14 +80,14 @@
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
 				<li>
-					<a href="home-02.html">Trang chủ</a>
+					<a href="home-02">Trang chủ</a>
 					
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</span>
 				</li>
 				<li>
-					<a href="product.html">Sản phẩm</a>
+					<a href="product">Sản phẩm</a>
 				</li>
 
 				<li class="label1" data-label1="hot">

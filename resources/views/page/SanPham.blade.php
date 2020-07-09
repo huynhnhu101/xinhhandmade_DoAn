@@ -1,4 +1,29 @@
+@extends('header')
+@section('active_desktop')
+  <li >
+      <a href="home-02">Trang chủ</a>
+  </li>
+  <li class="active-menu">
+    <a href="product">Sản phẩm</a>
+  </li>
+
+  <li class="label1" data-label1="hot">
+    <a href="shoping-cart.html">Giỏ hàng</a>
+  </li>
+
+  <li>
+    <a href="blog.html">Blog</a>
+  </li>
+
+  <li>
+    <a href="loginAdmin.html">Quản trị</a>
+  </li>
+@endsection
 @extends('master')
+@section('headerlink')
+<title>Sản phẩm</title>
+@endsection
+
 @section('content')
     <!-- Product -->
     <div class="bg0 m-t-23 p-b-140">
@@ -11,7 +36,7 @@
             >
               Tất cả sản phẩm
             </button>
-
+           
             <button
               class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5"
               data-filter=".women"
@@ -68,88 +93,36 @@
           </div>
 
           <!-- Search product -->
-          <div class="dis-none panel-search w-full p-t-10 p-b-15">
-            <div class="bor8 dis-flex p-l-15">
-              <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-                <i class="zmdi zmdi-search"></i>
-              </button>
+       
+            <div class="dis-none panel-search w-full p-t-10 p-b-15">
+              <div class="bor8 dis-flex p-l-15">
+              <form action="/" method="get">
+                <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04" type ="submit">
+                  <i class="zmdi zmdi-search"></i>
+                </button>
 
-              <input
-                class="mtext-107 cl2 size-114 plh2 p-r-15"
-                type="text"
-                name="search-product"
-                placeholder="Search"
-              />
+                <input
+                  class="mtext-107 cl2 size-114 plh2 p-r-15"
+                  type="text"
+                  name="keyyy"
+                  placeholder="Search"
+                />
+                </form>
+              </div>
             </div>
-          </div>
+         
 
           <!-- Filter -->
           <div class="dis-none panel-filter w-full p-t-10">
             <div
               class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm"
             >
-              <div class="filter-col1 p-r-15 p-b-27">
-                <div class="mtext-102 cl2 p-b-15">
-                  Sort By
-                </div>
-
-                <ul>
-                  <li class="p-b-6">
-                    <a href="#" class="filter-link stext-106 trans-04">
-                      Default
-                    </a>
-                  </li>
-
-                  <li class="p-b-6">
-                    <a href="#" class="filter-link stext-106 trans-04">
-                      Popularity
-                    </a>
-                  </li>
-
-                  <li class="p-b-6">
-                    <a href="#" class="filter-link stext-106 trans-04">
-                      Average rating
-                    </a>
-                  </li>
-
-                  <li class="p-b-6">
-                    <a
-                      href="#"
-                      class="filter-link stext-106 trans-04 filter-link-active"
-                    >
-                      Newness
-                    </a>
-                  </li>
-
-                  <li class="p-b-6">
-                    <a href="#" class="filter-link stext-106 trans-04">
-                      Giá: Thấp đến Cao
-                    </a>
-                  </li>
-
-                  <li class="p-b-6">
-                    <a href="#" class="filter-link stext-106 trans-04">
-                      Giá: Cao đến Thấp
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
               <div class="filter-col2 p-r-15 p-b-27">
                 <div class="mtext-102 cl2 p-b-15">
                   Giá
                 </div>
 
                 <ul>
-                  <li class="p-b-6">
-                    <a
-                      href="#"
-                      class="filter-link stext-106 trans-04 filter-link-active"
-                    >
-                      Tất cả
-                    </a>
-                  </li>
-
                   <li class="p-b-6">
                     <a href="#" class="filter-link stext-106 trans-04">
                       $0.00 - $50.00
@@ -164,21 +137,10 @@
 
                   <li class="p-b-6">
                     <a href="#" class="filter-link stext-106 trans-04">
-                      $100.00 - $150.00
+                      $100.00+
                     </a>
                   </li>
 
-                  <li class="p-b-6">
-                    <a href="#" class="filter-link stext-106 trans-04">
-                      $150.00 - $200.00
-                    </a>
-                  </li>
-
-                  <li class="p-b-6">
-                    <a href="#" class="filter-link stext-106 trans-04">
-                      $200.00+
-                    </a>
-                  </li>
                 </ul>
               </div>
 
@@ -253,48 +215,7 @@
                 </ul>
               </div>
 
-              <div class="filter-col4 p-b-27">
-                <div class="mtext-102 cl2 p-b-15">
-                  Tags
-                </div>
-
-                <div class="flex-w p-t-4 m-r--5">
-                  <a
-                    href="#"
-                    class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5"
-                  >
-                    Fashion
-                  </a>
-
-                  <a
-                    href="#"
-                    class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5"
-                  >
-                    Lifestyle
-                  </a>
-
-                  <a
-                    href="#"
-                    class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5"
-                  >
-                    Denim
-                  </a>
-
-                  <a
-                    href="#"
-                    class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5"
-                  >
-                    Streetstyle
-                  </a>
-
-                  <a
-                    href="#"
-                    class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5"
-                  >
-                    Crafts
-                  </a>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -302,30 +223,27 @@
         <div class="row isotope-grid">
           <!-- ------------- -->
           <!-- Vòng tay -->
+          @foreach($vt as $v)
+          
           <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
             <!-- Vòng tay 1 -->
             <div class="block2">
               <div class="block2-pic hov-img0">
-                <img src="images/vongtay-01.jpg" alt="IMG-PRODUCT" />
-
-                <a
-                  href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
-                >
+                <img src="{{$v->ImageLink}}.jpg" alt="IMG-PRODUCT" />
+                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                   Mua Ngay
                 </a>
               </div>
-
               <div class="block2-txt flex-w flex-t p-t-14">
                 <div class="block2-txt-child1 flex-col-l">
                   <a
                     href="product-detail.html"
                     class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
                   >
-                    Vòng tay Mông cổ
+                    {{$v->tensp}}
                   </a>
-
                   <span class="stext-105 cl3">
-                    50.000VND
+                    {{$v->giakm}}
                   </span>
                 </div>
 
@@ -349,903 +267,139 @@
               </div>
             </div>
           </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-            <!-- Vòng tay 2 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/vongtay-02.jpg" alt="IMG-PRODUCT" />
-
-                <a
-                  href="#"class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
-                >
-                  Mua Ngay
-                </a>
-              </div>
-
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a
-                    href="product-detail.html"
-                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-                  >
-                    Vòng tay eye
-                  </a>
-
-                  <span class="stext-105 cl3">
-                    $35.31
-                  </span>
-                </div>
-
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a
-                    href="#"
-                    class="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
-                  >
-                    <img
-                      class="icon-heart1 dis-block trans-04"
-                      src="images/icons/icon-heart-01.png"
-                      alt="ICON"
-                    />
-                    <img
-                      class="icon-heart2 dis-block trans-04 ab-t-l"
-                      src="images/icons/icon-heart-02.png"
-                      alt="ICON"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
           
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-            <!-- Vòng tay 4 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/vongtay-04.jpg" alt="IMG-PRODUCT" />
-          
-                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                  Mua Ngay
-                </a>
-              </div>
-          
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                    Vòng tay len
-                  </a>
-          
-                  <span class="stext-105 cl3">
-                    $75.00
-                  </span>
-                </div>
-          
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-            <!-- Vòng tay 5 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/vongtay-05.jpg" alt="IMG-PRODUCT" />
-          
-                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                  Mua Ngay
-                </a>
-              </div>
-          
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                    Vòng tay cườm dây
-                  </a>
-          
-                  <span class="stext-105 cl3">
-                    $34.75
-                  </span>
-                </div>
-          
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item watches">
-            <!-- Vòng tay 6 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/vongtay-06.jpg" alt="IMG-PRODUCT" />
-          
-                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                  Mua Ngay
-                </a>
-              </div>
-          
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Vòng tay dây thừng
-                  </a>
-          
-                  <span class="stext-105 cl3">
-                    $93.20
-                  </span>
-                </div>
-          
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
-          
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-            <!-- Vòng tay 8-->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/vongtay-08.jpg" alt="IMG-PRODUCT" />
-          
-                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                  Mua Ngay
-                </a>
-              </div>
-          
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                    Vòng tay kim loại cườm
-                  </a>
-          
-                  <span class="stext-105 cl3">
-                    $18.96
-                  </span>
-                </div>
-          
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-            <!-- Vòng tay 7 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/vongtay-07.jpg" alt="IMG-PRODUCT" />
-          
-                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                  Mua Ngay
-                </a>
-              </div>
-          
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                    Vòng tay hạt cườm
-                  </a>
-          
-                  <span class="stext-105 cl3">
-                    $25.85
-                  </span>
-                </div>
-          
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
+          <!-- <div class="row">
+            {{$vt->links()}}
+          </div> -->
 <!-- end Vòng Tay -->
 <!-- Thiệp -->
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
-            <!-- Thiệp 1 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/thiep-01.jpg" alt="IMG-PRODUCT" />
+          @foreach($th as $t)
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+              <!-- Thiệp 1 -->
+              <div class="block2">
+                <div class="block2-pic hov-img0">
+                  <img src="{{$t->ImageLink}}.jpg" alt="IMG-PRODUCT" />
 
-                <a
-                  href="#"
-                  class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
-                >
-                  Mua Ngay
-                </a>
-              </div>
-
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a
-                    href="product-detail.html"
-                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-                  >
-                    Thiệp hoa khô
-                  </a>
-
-                  <span class="stext-105 cl3">
-                    $25.50
-                  </span>
-                </div>
-
-                <div class="block2-txt-child2 flex-r p-t-3">
                   <a
                     href="#"
-                    class="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
+                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
                   >
-                    <img
-                      class="icon-heart1 dis-block trans-04"
-                      src="images/icons/icon-heart-01.png"
-                      alt="ICON"
-                    />
-                    <img
-                      class="icon-heart2 dis-block trans-04 ab-t-l"
-                      src="images/icons/icon-heart-02.png"
-                      alt="ICON"
-                    />
+                    Mua Ngay
                   </a>
+                </div>
+
+                <div class="block2-txt flex-w flex-t p-t-14">
+                  <div class="block2-txt-child1 flex-col-l">
+                    <a
+                      href="product-detail.html"
+                      class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
+                    >
+                      {{$t->tensp}}
+                    </a>
+
+                    <span class="stext-105 cl3">
+                      {{$t->giakm}}
+                    </span>
+                  </div>
+
+                  <div class="block2-txt-child2 flex-r p-t-3">
+                    <a
+                      href="#"
+                      class="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
+                    >
+                      <img
+                        class="icon-heart1 dis-block trans-04"
+                        src="images/icons/icon-heart-01.png"
+                        alt="ICON"
+                      />
+                      <img
+                        class="icon-heart2 dis-block trans-04 ab-t-l"
+                        src="images/icons/icon-heart-02.png"
+                        alt="ICON"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          
-
-         
-
-          
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
-            <!-- Thiệp 5-->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/thiep-05.jpg" alt="IMG-PRODUCT" />
-
-                <a
-                  href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
-                >
-                  Mua Ngay
-                </a>
-              </div>
-
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a
-                    href="product-detail.html"
-                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-                  >
-                    Thiệp monday
-                  </a>
-
-                  <span class="stext-105 cl3">
-                    $63.16
-                  </span>
-                </div>
-
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a
-                    href="#"
-                    class="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
-                  >
-                    <img
-                      class="icon-heart1 dis-block trans-04"
-                      src="images/icons/icon-heart-01.png"
-                      alt="ICON"
-                    />
-                    <img
-                      class="icon-heart2 dis-block trans-04 ab-t-l"
-                      src="images/icons/icon-heart-02.png"
-                      alt="ICON"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
-            <!-- Thiệp 4-->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/thiep-04.jpg" alt="IMG-PRODUCT" />
-
-                <a
-                  href="#"class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
-                >
-                  Mua Ngay
-                </a>
-              </div>
-
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a
-                    href="product-detail.html"
-                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-                  >
-                   Thiệp tím hoa nỉ
-                  </a>
-
-                  <span class="stext-105 cl3">
-                    $63.15
-                  </span>
-                </div>
-
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a
-                    href="#"
-                    class="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
-                  >
-                    <img
-                      class="icon-heart1 dis-block trans-04"
-                      src="images/icons/icon-heart-01.png"
-                      alt="ICON"
-                    />
-                    <img
-                      class="icon-heart2 dis-block trans-04 ab-t-l"
-                      src="images/icons/icon-heart-02.png"
-                      alt="ICON"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
-            <!-- Vòng Tay 8 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/thiep-02.jpg" alt="IMG-PRODUCT" />
-
-                <a
-                  href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
-                >
-                  Mua Ngay
-                </a>
-              </div>
-
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a
-                    href="product-detail.html"
-                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-                  >
-                   Thiệp đính hoa vải
-                  </a>
-
-                  <span class="stext-105 cl3">
-                    $18.49
-                  </span>
-                </div>
-
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a
-                    href="#"
-                    class="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
-                  >
-                    <img
-                      class="icon-heart1 dis-block trans-04"
-                      src="images/icons/icon-heart-01.png"
-                      alt="ICON"
-                    />
-                    <img
-                      class="icon-heart2 dis-block trans-04 ab-t-l"
-                      src="images/icons/icon-heart-02.png"
-                      alt="ICON"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
-            
-            <!-- Thiệp 1-->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="images/thiep-03.jpg" alt="IMG-PRODUCT" />
-
-                <a
-                  href="#"class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
-                >
-                  Mua Ngay
-                </a>
-              </div>
-
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l">
-                  <a
-                    href="product-detail.html"
-                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-                  >
-                    Thiệp Happy birthday
-                  </a>
-
-                  <span class="stext-105 cl3">
-                    $86.85
-                  </span>
-                </div>
-
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a
-                    href="#"
-                    class="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
-                  >
-                    <img
-                      class="icon-heart1 dis-block trans-04"
-                      src="images/icons/icon-heart-01.png"
-                      alt="ICON"
-                    />
-                    <img
-                      class="icon-heart2 dis-block trans-04 ab-t-l"
-                      src="images/icons/icon-heart-02.png"
-                      alt="ICON"
-                    />
-                  </a>
-                </div>
-              </div>
-          </div>
-
-          
-        </div>
+          @endforeach
+  
+        
         <!-- Len -->
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len1 -->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-01.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                Len hoạt hình
+          @foreach($len as $l)
+          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
+            <!-- Len1 -->
+            <div class="block2">
+              <div class="block2-pic hov-img0">
+                <img src="{{$l->ImageLink}}.jpg" alt="IMG-PRODUCT" />
+          
+                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                  Mua Ngay
                 </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
               </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
+          
+              <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l">
+                  <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                  {{$l->tensp}}
+                  </a>
+          
+                  <span class="stext-105 cl3">
+                    {{$l->giakm}}
+                  </span>
+                </div>
+          
+                <div class="block2-txt-child2 flex-r p-t-3">
+                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
+                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
+          @endforeach
       
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len2-->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-02.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Len cho bé yêu
-                </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
-              </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len3-->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-03.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Len túi xách
-                </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
-              </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len4-->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-04.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Len khăn tự đan
-                </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
-              </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len5-->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-05.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Len Bikini
-                </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
-              </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len6-->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-06.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Len 4 chú gấu
-                </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
-              </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len7-->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-07.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Len tình nhân
-                </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
-              </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
-          <!-- Len8-->
-          <div class="block2">
-            <div class="block2-pic hov-img0">
-              <img src="images/len-08.jpg" alt="IMG-PRODUCT" />
-        
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                Mua Ngay
-              </a>
-            </div>
-        
-            <div class="block2-txt flex-w flex-t p-t-14">
-              <div class="block2-txt-child1 flex-col-l">
-                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                  Túi len xinh xắn
-                </a>
-        
-                <span class="stext-105 cl3">
-                  $75.00
-                </span>
-              </div>
-        
-              <div class="block2-txt-child2 flex-r p-t-3">
-                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                  <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                  <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 <!-- End len -->
 
 <!-- Dụng cụ -->
-<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
-  <!-- Dụng cụ 1-->
-  <div class="block2">
-    <div class="block2-pic hov-img0">
-      <img src="images/dungcu-01.jpg" alt="IMG-PRODUCT" />
+          @foreach($dc as $d)
+          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
+            <!-- Dụng cụ 1-->
+            <div class="block2">
+              <div class="block2-pic hov-img0">
+                <img src="{{$d->ImageLink}}.jpg" alt="IMG-PRODUCT" />
 
-      <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-        Mua Ngay
-      </a>
-    </div>
+                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                  Mua Ngay
+                </a>
+              </div>
 
-    <div class="block2-txt flex-w flex-t p-t-14">
-      <div class="block2-txt-child1 flex-col-l">
-        <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-          Dụng cụ cắt dán
-        </a>
+              <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l">
+                  <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                    {{$d->tensp}}
+                  </a>
 
-        <span class="stext-105 cl3">
-          $75.00
-        </span>
-      </div>
+                  <span class="stext-105 cl3">
+                    {{$d->giakm}}
+                  </span>
+                </div>
 
-      <div class="block2-txt-child2 flex-r p-t-3">
-        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-          <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-          <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- --- -->
-<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
-  <!-- Dụng cụ 2-->
-  <div class="block2">
-    <div class="block2-pic hov-img0">
-      <img src="images/dungcu-02.jpg" alt="IMG-PRODUCT" />
-
-      <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-        Mua Ngay
-      </a>
-    </div>
-
-    <div class="block2-txt flex-w flex-t p-t-14">
-      <div class="block2-txt-child1 flex-col-l">
-        <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-          Dụng cụ vải
-        </a>
-
-        <span class="stext-105 cl3">
-          $75.00
-        </span>
-      </div>
-
-      <div class="block2-txt-child2 flex-r p-t-3">
-        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-          <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-          <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
-  <!-- Dụng cụ 3-->
-  <div class="block2">
-    <div class="block2-pic hov-img0">
-      <img src="images/dungcu-03.jpg" alt="IMG-PRODUCT" />
-
-      <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-        Mua Ngay
-      </a>
-    </div>
-
-    <div class="block2-txt flex-w flex-t p-t-14">
-      <div class="block2-txt-child1 flex-col-l">
-        <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-          Dụng cụ đính kèm
-        </a>
-
-        <span class="stext-105 cl3">
-          $75.00
-        </span>
-      </div>
-
-      <div class="block2-txt-child2 flex-r p-t-3">
-        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-          <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-          <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
-  <!-- Dụng cụ 3-->
-  <div class="block2">
-    <div class="block2-pic hov-img0">
-      <img src="images/dungcu-04.jpg" alt="IMG-PRODUCT" />
-
-      <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-        Mua Ngay
-      </a>
-    </div>
-
-    <div class="block2-txt flex-w flex-t p-t-14">
-      <div class="block2-txt-child1 flex-col-l">
-        <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-        Dụng cụ kim tuyến
-        </a>
-
-        <span class="stext-105 cl3">
-          $75.00
-        </span>
-      </div>
-
-      <div class="block2-txt-child2 flex-r p-t-3">
-        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-          <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-          <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
-  <!-- Dụng cụ 4-->
-  <div class="block2">
-    <div class="block2-pic hov-img0">
-      <img src="images/dungcu-05.jpg" alt="IMG-PRODUCT" />
-
-      <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-        Mua Ngay
-      </a>
-    </div>
-
-    <div class="block2-txt flex-w flex-t p-t-14">
-      <div class="block2-txt-child1 flex-col-l">
-        <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-        Dụng cụ phụ kiện
-        </a>
-
-        <span class="stext-105 cl3">
-          $75.00
-        </span>
-      </div>
-
-      <div class="block2-txt-child2 flex-r p-t-3">
-        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-          <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-          <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
+                <div class="block2-txt-child2 flex-r p-t-3">
+                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
+                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          @endforeach
 <!-- end dụng cụ -->
         <!-- Load more -->
-        <div class="flex-c-m flex-w w-full p-t-45">
-          <a
-            href="#"
-            class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04"
-          >
-            Xem thêm
-          </a>
         </div>
       </div>
     </div>
-
 @endsection

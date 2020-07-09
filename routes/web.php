@@ -24,3 +24,7 @@ Route::get('source/product',[
 	'as' => 'san pham',
 	'uses'=> 'PageController@getSanPham'
 ]);
+Route::get('source/search',[
+	'as' => 'search',
+	'uses'=> 'PageController@getSearch'
+]);
